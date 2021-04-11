@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h2.groove {border-style: groove;
+                border-radius: 3px;
+                margin-bottom: 20px;
+                padding-top:1%;
+                padding-left: 40%;
+                padding-bottom: 2%;
+                background-color: gainsboro;}
+        </style>
+    </head>
+    <body >
+        <h2 class="groove">
+            <a href="/imageupload">Object Detection</a>
+        </h2>
+        <div>
+            <form action="imageupload/imageprocess" method="POST" enctype="multipart/form-data"> 
+                {% csrf_token %}
+                
+                <b><input style="font-style: italic; font-family: 'Times New Roman', Times, serif;" id="image" type="file" name="image"/> 
+                <br>
+                <br>
+                <input style="font-style: italic; font-family: 'Times New Roman', Times, serif;" type="submit" value="Submit"/></b>  
+            </form>
+        </div>
+    </body>
+</html>
